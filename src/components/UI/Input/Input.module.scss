@@ -1,0 +1,125 @@
+.inputWrapper {
+	position: relative;
+	width: 100%;
+	margin-bottom: 8px;
+
+	&.group {
+		width: calc(50% - 4px);
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		z-index: 1;
+		width: 0;
+		height: 2px;
+		background: transparent;
+		transition: .5s all ease-in-out;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		right: 50%;
+		z-index: 1;
+		width: 0;
+		height: 2px;
+		background: transparent;
+		transition: .5s all ease-in-out;
+	}
+
+	&:focus-within::before, &:focus-within::after {
+		width: 50%;
+		animation: flickering 2s ease-in-out infinite;
+	}
+
+	&.notValid {
+		&::before, &::after {
+			width: 50%;
+			animation: flickeringNotValid 2s ease-in-out infinite;
+		}
+	}
+}
+
+.input {
+	width: 100%;
+	height: 48px;
+	padding: 12px;
+	background: rgba(#282828, .5);
+	letter-spacing: 0.0625em;
+	font-size: 16px;
+	font-weight: 300;
+	color: #f5f5f5;
+	font-family: 'Roboto', sans-serif;
+
+	&.textArea {
+		min-height: 144px;
+		resize: vertical;
+	}
+
+	&::placeholder {
+		color: #ebebeb;
+	}
+
+	&:-webkit-autofill {
+		animation-name: autofill;
+		transition: all 36000s ease-in-out 0s;
+	}
+}
+
+@media (max-width: 768px) {
+	.inputWrapper {
+		&.group {
+			width: 100%;
+		}
+	}
+}
+
+@media (max-width: 414px) {
+	.input {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 320px) {
+	.input {
+    height: 40px;
+    padding: 8px;
+		font-size: 12px;
+
+    &.textArea {
+      min-height: 120px;
+    }
+	}
+}
+
+@keyframes flickering {
+	0%, 100% {
+		background: #00ffff;
+		box-shadow: 0 0 .25em rgba(#00ffff, 1),
+		inset 0 0 .25em rgba(#00ffff, 1);
+	}
+	50% {
+		background: #ff00ff;
+		box-shadow: 0 0 .25em rgba(#ff00ff, 1),
+		inset 0 0 .25em rgba(#ff00ff, 1);
+	}
+}
+
+@keyframes flickeringNotValid {
+	0%, 100% {
+		background: #ff0000;
+		box-shadow: 0 0 .25em rgba(#ff0000, 1),
+		inset 0 0 .25em rgba(#ff0000, 1);
+	}
+	50% {
+		background: #af0000;
+		box-shadow: 0 0 .25em rgba(#af0000, 1),
+		inset 0 0 .25em rgba(#af0000, 1);
+	}
+}
+
+@keyframes autofill {}
