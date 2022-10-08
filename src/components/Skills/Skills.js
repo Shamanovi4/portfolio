@@ -1,7 +1,7 @@
 import React from 'react'
 import {Section} from '../../hoc/Section/Section'
 import {FaHtml5, FaCss3, FaReact, FaGit, FaNpm, FaGulp, FaFigma} from 'react-icons/fa'
-import {SiJavascript, SiWebpack, SiAdobephotoshop} from 'react-icons/si'
+import {SiJavascript, SiWebpack, SiAdobephotoshop, SiTypescript} from 'react-icons/si'
 import classes from './Skills.module.scss'
 import {Tag} from '../UI/Tag/Tag'
 
@@ -11,6 +11,7 @@ export const Skills = () => {
 		{icon: <FaCss3 />, name: 'CSS', details: 'CSS3, Responsive, SASS, SCSS', color: '#2965f1'},
 		{icon: <SiJavascript />, name: 'JavaScript', details: 'ES6, Redux, Axios, JQuery', color: '#f7df1e'},
 		{icon: <FaReact />, name: 'React', details: 'Hooks, Router, Redux', color: '#61dafb'},
+    {icon: <SiTypescript />, name: 'Typescript', details: '', color: '#3178c6'},
 	]
 	const secondarySkillsList = [
 		{icon: <FaGit />, name: 'Git', color: '#f54d27'},

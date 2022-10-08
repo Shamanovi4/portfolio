@@ -5,6 +5,7 @@ import reactQuizImage from '../../assets/images/react-quiz.png'
 import spreadsheetsImage from '../../assets/images/spreadsheets.png'
 import reactHooksImage from '../../assets/images/react-hooks.png'
 import centerLogisticImage from '../../assets/images/center-logistic.png'
+import mafiaRandomizer from '../../assets/images/mafia-randomizer.png'
 import {Tag} from '../UI/Tag/Tag'
 import classes from './Projects.module.scss'
 
@@ -36,6 +37,8 @@ const projectsList = [
     then create some kind of Google Spreadsheets clone. This SPA was
     written with the use of HTML, SCSS, JS, Redux (written from
     scratch), BEM, Webpack.`},
+  {title: 'Mafia Randomizer', image: mafiaRandomizer, linkLive: 'https://mafia-randomizer.web.app/', linkGithub: 'https://github.com/Shamanovi4/mafia-randomizer',
+		description: `Roles randomizer, timer and other tools for Mafia intelligence game. Written with React and Typescript.`},
   {title: 'React Hooks', image: reactHooksImage, linkLive: 'https://react-hooks-a59de.web.app', linkGithub: 'https://github.com/Shamanovi4/react-hooks',
 		description: `Simple React app for searching and fetching data from github, e.g.,
     profiles, repositories and other. Written with modern React Hooks
