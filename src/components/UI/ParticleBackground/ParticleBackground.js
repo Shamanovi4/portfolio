@@ -17,10 +17,10 @@ export const ParticleBackground = () => {
       particles: {
         move: {
           enable: true,
-          speed: {min: 0.25, max: 2.5}
+          speed: {min: 0.25, max: 2}
         },
         size: {
-          value: {min: 0.25, max: 2.5}
+          value: {min: 0.25, max: 2}
         },
         opacity: {
           value: {min: 0.25, max: 1}
@@ -30,6 +30,13 @@ export const ParticleBackground = () => {
           distance: 120,
           enable: true,
           opacity: 0.5
+        },
+        number: {
+          density: {
+            enable: true,
+            area: 500,
+            factor: 4000
+          }
         }
       },
       interactivity: {
@@ -45,7 +52,7 @@ export const ParticleBackground = () => {
         },
         modes: {
           push: {
-            quantity: 4
+            quantity: 2
           },
           grab: {
             distance: 120

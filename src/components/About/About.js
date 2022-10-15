@@ -1,6 +1,6 @@
 import React from 'react'
 import {Section} from '../../hoc/Section/Section'
-import photo from '../../assets/images/photo-60.png'
+import photo from '../../assets/images/photo-60.webp'
 import {Tag} from '../UI/Tag/Tag'
 import classes from './About.module.scss'
 
