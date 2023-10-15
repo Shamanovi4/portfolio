@@ -8,7 +8,6 @@ import {
   FaGulp,
   FaFigma,
   FaAngular,
-  FaNodeJs,
 } from 'react-icons/fa'
 import {
   SiJavascript,
@@ -54,7 +53,6 @@ export const Skills = () => {
       color: '#3178c6',
     },
     { icon: <FaAngular />, name: 'Angular 14', details: '', color: '#dd0031' },
-    { icon: <FaNodeJs />, name: 'Node.js', details: '', color: '#57924f' },
     { icon: <SiNestjs />, name: 'NestJS', details: '', color: '#e0234e' },
     {
       icon: <SiPostgresql />,
@@ -74,10 +72,7 @@ export const Skills = () => {
   function renderSkillsList(list) {
     return list.map((item, index) => {
       return (
-        <li
-          className={classes.skillsListItem}
-          key={index}
-        >
+        <li className={classes.skillsListItem} key={index}>
           <i
             className={classes.skillsListItemIcon}
             style={{ color: item.color }}

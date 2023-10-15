@@ -6,7 +6,6 @@ import spreadsheetsImage from '../../assets/images/spreadsheets.webp'
 import reactHooksImage from '../../assets/images/react-hooks.webp'
 import centerLogisticImage from '../../assets/images/center-logistic.webp'
 import mafiaRandomizer from '../../assets/images/mafia-randomizer.webp'
-import feedbackReceiver from '../../assets/images/feedback-receiver-client.webp'
 import angularCurrencyConverter from '../../assets/images/angular-currency-convert.webp'
 import { Tag } from '../UI/Tag/Tag'
 import classes from './Projects.module.scss'
@@ -70,14 +69,6 @@ const projectsList = [
     linkLive: 'https://center-logistic.web.app',
     linkGithub: 'https://github.com/Shamanovi4/center-logistic',
     description: `Transport company website written with the use of Pug, BEM, SCSS, JQuery, Gulp. Website is fully responsive`,
-  },
-  {
-    title: 'Feedback Receiver',
-    image: feedbackReceiver,
-    linkLive: 'https://feedback-receiver-client.onrender.com/',
-    linkGithub: 'https://github.com/Shamanovi4/feedback-receiver-client',
-    description: `NestJS back end part and React front end app that sends
-    feedback messages to PostgreSQL database.`,
   },
   {
     title: 'Currency Converter',
